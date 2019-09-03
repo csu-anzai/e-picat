@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+html,
+body {
+/*css for full size background image*/
+  background: url(black-cat-3840x2160.jpg) no-repeat center center fixed; 
+  
+  background-size: cover;
+  
+  height: 100%;
+  text-align: center;
