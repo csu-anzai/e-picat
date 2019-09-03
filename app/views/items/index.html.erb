@@ -6,29 +6,17 @@
 </div>
 <div class="container">
 	<div class="row">
+		<% @items.each do |item| %>
 		<div class="col-sm-6 col-md-4 my-3">
 			<div class="card">
-				<img src="https://picsum.photos/200/200" class="card-img-top" alt="..." height="200">
+				<img src="<%= item.image_url %>" class="card-img-top" alt="..." height="200">
 				<div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
+					<small class="text-muted">
+							<a href="items/<%=item.id%>"><%=item.title%></a>
+					</small>
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-6 col-md-4 my-3">
-			<div class="card">
-				<img src="https://picsum.photos/200/200" class="card-img-top" alt="..." height="200">
-				<div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-4 my-3">
-			<div class="card">
-				<img src="https://picsum.photos/200/200" class="card-img-top" alt="..." height="200">
-				<div class="card-footer">
-					<small class="text-muted">Last updated 3 mins ago</small>
-				</div>
-			</div>
-		</div>
+		<% end %>
 	</div>	
 </div>
