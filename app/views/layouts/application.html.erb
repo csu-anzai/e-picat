@@ -26,8 +26,14 @@
             
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-success my-2 my-sm-0 mx-2" type="submit">Inscription</button>
-            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Connexion</button>
+          <% if signed_in? %>
+            <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: 'btn btn-outline-danger my-2 my-sm-0 mx-2' %>
+
+          <% else %>
+            <%= link_to "Inscription", new_user_registration_path, class: 'btn btn-outline-success my-2 my-sm-0 mx-2' %>
+
+            <%= link_to "Connexion", new_user_session_path, class: 'btn btn-outline-info my-2 my-sm-0' %>
+          <% end %>
           </form>
         </div>
       </nav>
