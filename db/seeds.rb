@@ -8,7 +8,6 @@
 
 
  20.times do
- 	name = Faker::Creature::Cat.name
   description = "Le chat est un mammifère de la famille de félidés. Il pèse en moyenne 2,5 à 4,5 kg et mesure entre 66 et 76 cm, avec la queue. Ses pattes sont pourvues de griffes rétractiles"
 
   description.length

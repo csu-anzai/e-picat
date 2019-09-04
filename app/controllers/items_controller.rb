@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  include CartsHelper
+  before_action :current_cart, only: [:show]
+
   def show
     @item = Item.find(params[:id])
   end

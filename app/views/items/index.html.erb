@@ -12,7 +12,8 @@
 				<img src="<%= item.image_url %>" class="card-img-top" alt="..." height="200">
 				<div class="card-footer">
 					<small class="text-muted">
-							<a href="items/<%=item.id%>"><%=item.title%></a>
+						<%= link_to item.title, item_path(item.id) %>
+							<!-- <a href="items/<%=item.id%>"><%=item.title%></a> -->
 					</small>
 				</div>
 			</div>

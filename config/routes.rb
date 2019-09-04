@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
- 	resources :items
-  devise_for :users
+	resources :items do 
+		resources :carts
+	end
+	devise_for :users
 
-  root "items#index"
+	root "items#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
